@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sohee Cho | Extra Credit Week 5</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body class="mysite">
+        <div class="mysite-content">
+            <form action="submit.html" id="userForm">
+            <div class="wrapper">
+                <h1 id="heading">Choose Your Plant</h1>
+                <img src="images/plants2.gif" alt="plants" >
+                <p><label for="choose">Would you like to purchase a cactus or pothos?</label>
+                <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+                    </p>
+                <p><label for="number">How many would you like?</label>
+                <input type="number" id="number" name="amount" value="1" min="1" max="10">
+                    </p>
+                <button type="submit" form="userForm" onclick id="btn">Add to cart</button>
+               
+
+            
+                
+
+
+            </div>
+        </form>
+        </div>
+        <footer class="mysite-footer">
+            <p>© 2020 | <a href="http://www.soheecho.com">Sohee Cho</a></p>
+        </footer>
+        
+        <script src="main.js" async defer></script>
+    </body>
+
+</html>

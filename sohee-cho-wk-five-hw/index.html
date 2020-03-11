@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Sohee Cho | Week 5 HW</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+        
+
+
+    </head>
+    <body class="mysite">
+        <div class="mysite-content">
+            <div class="wrapper">
+                <h1 id="heading">User Registration Form</h1>
+                
+                <form action="submit.html" id="userForm">
+                    <input type="text" name="username" placeholder="create username" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{7,15}$"
+                        required>
+                    <input type="email" name="mail" placeholder="enter your email"
+                        pattern="(\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b)" required>
+                    <input type="password" name="password" placeholder="create a password"
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{13,24}$" required>
+                    <button type="submit" form="userForm" id="btn">Submit</button>
+                    <button id="btnReset">Reset</button>
+                </form>
+                <h2 id="instructions"><u>Instructions</u>: <b>Username</b> must contain at least one number and be at least 8 characters long.</h2> 
+                <h2 id="instructions2"><b>Password</b> must contain at least one number, one lowercase and one uppercase letter and must be least 13 characters long, but no more than 24 characters long, containing letters, numbers or the underscore.
+                     </h2>
+
+
+            </div>
+        </div>
+        <footer class="mysite-footer">
+            <p>© 2020 | <a href="http://www.soheecho.com">Sohee Cho</a></p>
+        </footer>
+        
+        <script src="main.js" async defer></script>
+    </body>
