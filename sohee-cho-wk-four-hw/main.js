@@ -15,3 +15,15 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";
 }
+
+const leftBtn = document.getElementById("left");
+const rightBtn = document.getElementById("right");
+
+leftBtn.addEventListener("click", () => {
+    addDivs(-1);
+ });
+
+rightBtn.addEventListener("click", () => {
+  addDivs(1);
+});
+

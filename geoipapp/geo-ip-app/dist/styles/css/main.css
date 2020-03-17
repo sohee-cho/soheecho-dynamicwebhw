@@ -1,0 +1,187 @@
+/*  scss variables */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Dosis";
+  font-size: 1.3rem;
+  background: #f08850;
+  /* So that there is always a browser window scrollbar to make sure that the find me and refresh me buttons do not move on click. */
+  overflow-y: scroll; }
+
+.btn-wrapper {
+  width: 90%;
+  display: flex;
+  max-width: 800px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem; }
+
+#refresh-me,
+#find-me {
+  margin: 0 auto;
+  font-family: "Dosis";
+  font-size: 1rem;
+  display: block;
+  padding: 12px 24px;
+  width: 11rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #4068b0;
+  margin: 3rem auto;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 9px #aaa;
+  color: #f0d048; }
+  @media (min-width: 411px) {
+    #refresh-me,
+    #find-me {
+      font-size: 80%; } }
+  #refresh-me:first-of-type,
+  #find-me:first-of-type {
+    margin-right: 1rem; }
+  #refresh-me:hover,
+  #find-me:hover {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px); }
+  #refresh-me:active,
+  #find-me:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(4px); }
+
+.wrapper {
+  margin: 3rem auto;
+  padding-top: 22rem;
+  width: 90%;
+  max-width: 800px;
+  /* Set a height to .wrapper div that is shorter than the actual wrapper div height when the data is rendered to the page, to ensure that there will always be overflow on the Y axis when the data renders to the page. */
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  /* This is to make sure that a scrollbar appears when there is overflow on the Y axis. */
+  overflow-y: auto; }
+  .wrapper p {
+    margin: 0 auto;
+    text-align: center; }
+  .wrapper a {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .wrapper #status {
+    text-align: center;
+    margin-bottom: 1.5rem; }
+  @media (min-width: 480px) {
+    .wrapper {
+      padding-top: 18rem; } }
+  @media (min-width: 600px) {
+    .wrapper {
+      font-size: 1.5rem; } }
+  @media (min-width: 800px) {
+    .wrapper {
+      padding-top: 22rem;
+      font-size: 1.7rem; } }
+
+/* Scrollbar related styling */
+/* Needed for scrollbar styling without -webkit pseudo-class to ensure that the scrollbar-thumb styling is applied to the .wrapper div */
+.scrollbar-thumb {
+  background-color: #16174b;
+  outline: 1px solid slategrey;
+  border-radius: 15px; }
+
+/* end scrollbar styling without -webkit pseudo-class */
+/* Default/starting state of -webkit-scrollbar styling when there is no data on the page - hides the scrollbar */
+.wrapper::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+/* .hide-scrollbar class added in initial if statement to enforce default scrollbar state - hides the scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; }
+
+/* .show-scrollbar class added when .backgroundSkyblue class added - shows the scrollbar for the .wrapper class */
+.show-scrollbar::-webkit-scrollbar {
+  width: 1rem;
+  background: white; }
+
+/* ::-webkit-scrollbar-track-piece is the top-most layer of the the progress bar not covered by the draggable scrolling element (thumb). */
+.show-scrollbar::-webkit-scrollbar-track-piece {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+/* The -webkit-scrollbar-track styling addressed the albeit small but empty apace below  the scrollbar progress bar. */
+.show-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5); }
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #16174b;
+  outline: 1px solid slategrey;
+  border-radius: 15px; }
+
+/* class added to div with .wrapper class in if/else statement if there is no .backgroundSkyblue class present. Causes switch from initial default orange background color to sky blue background color.  And when the background is sky blue, the div.wrapper scrollbar appears. */
+.backgroundSkyblue {
+  background: #8bd3fb; }
+
+/* ul styling. Where the geo ip data resides. */
+ul {
+  list-style-type: none;
+  margin: 0 auto;
+  width: 90%; }
+  ul li {
+    line-height: 1.5;
+    word-wrap: break-word;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center; }
+
+/* The styling for the span tag that I use in the template string that makes up the innerHTML for the child div of the li. */
+span {
+  color: #983040; }
+
+/* class I add to the span tag used in the child div of the li to enable the use of two different colors in the span tag. */
+.data {
+  color: #b65b00; }
+
+/* Footer styling based on Philip Walton's Sticky Footer used with CSS Flexbox. */
+.site-footer {
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+  width: 100%;
+  font-size: 100%;
+  color: #16174b; }
+  @media (min-width: 411px) {
+    .site-footer {
+      font-size: 120%; } }
+  @media (min-width: 600px) {
+    .site-footer {
+      font-size: 150%; } }
+
+:root {
+  --space: 1.5em 0;
+  --space: 2em 0; }
+
+.Site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
+.Site-content {
+  flex: 1 0 auto;
+  padding: var(--space) var(--space) 0;
+  width: 100%; }
+
+.Site-content:after {
+  content: "\00a0";
+  display: block;
+  margin-top: var(--space);
+  height: 0;
+  visibility: hidden; }
